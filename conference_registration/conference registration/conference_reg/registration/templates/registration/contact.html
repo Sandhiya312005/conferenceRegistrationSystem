@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Contact</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'registration/styles.css' %}">
+</head>
+<body>
+    <header>
+        <nav>
+            <a href="{% url 'home' %}">Home</a>
+            <a href="{% url 'register' %}">Register</a>
+            <a href="{% url 'contact' %}">Contact Us</a>
+            <a href="{% url 'profile' %}">Profile</a>
+        </nav>
+    </header>
+    <h1>Contact Us</h1>
+    <div class="container">
+        <form method="post">
+            {% csrf_token %}
+            <h2>Contact Form</h2>
+            {{ form.as_p }}
+            <button type="submit">Submit</button>
+        </form>
+        <nav>
+            <a href="{% url 'home' %}">Back to Home</a>
+        </nav>
+    </div>
+  
+</body>
+</html>

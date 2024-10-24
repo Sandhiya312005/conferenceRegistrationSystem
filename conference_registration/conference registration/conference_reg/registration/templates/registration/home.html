@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Home</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'registration/styles.css' %}">
+</head>
+<body>
+    <header>
+        <nav>
+            <a href="{% url 'home' %}">Home</a>
+            <a href="{% url 'register' %}">Register</a>
+            <a href="{% url 'contact' %}">Contact Us</a>
+            <a href="{% url 'profile' %}">Profile</a>
+        </nav>
+    </header>
+    <h1>Welcome to the Conference Registration System</h1>
+    <div class="container">
+
+        <p>Explore our conference and get registered!</p>
+        <p>Event Name : 4th National Conference</p>
+        <p>Place : Karpagam College Of Engineering</p>
+        <p>Date : 5 September,2024</p>
+        <p>Time : 10.00 am - 5.00pm </p>
+        <p>LAst date for Registration : August 31, 2024 </p>
+        <a href="{% url 'register' %}">Register for an Event</a>
+    </div>
+
+</body>
+</html>
